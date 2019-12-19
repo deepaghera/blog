@@ -1,0 +1,11 @@
+<%- include('partials/header') -%>
+<h1>Hello Baks</h1>
+<p><%= HomeSC %></p>
+
+<% blogdatas.forEach((el) => { %>
+    <h1><%=el.titleBody %></h1>
+    <p><%=el.postBody %></p>
+<%})%>
+
+
+<%- include('partials/footer') -%>
