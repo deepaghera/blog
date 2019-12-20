@@ -33,3 +33,10 @@
 	font-size: 12px;
   color: #fff;
 }
+/* .ellipsis {
+    text-overflow: ellipsis;
+  
+    /* Required for text-overflow to do anything 
+    white-space: nowrap;
+    overflow: hidden;
+  } */

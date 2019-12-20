@@ -3,8 +3,12 @@
 <p><%= HomeSC %></p>
 
 <% blogdatas.forEach((el) => { %>
-    <h1><%=el.titleBody %></h1>
-    <p><%=el.postBody %></p>
+<h1><%=el.titleBody %></h1>
+
+<p>
+    <%= el.postBody.substring(0,100) + " ..." %>
+    <a href="http://localhost:3000/post/<%= el.titleBody %>">read mode</a></p>
+
 <%})%>
 
 

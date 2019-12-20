@@ -55,17 +55,17 @@ app.post('/compose', (req, res) => {
   res.redirect('/');
 });
 
-app.get('/posts/:topic', (req, res) => {
+app.get('/post/:topic', (req, res) => {
   for(let i=0;i<blogdata.length;i++){
     let btitle = blogdata[i].titleBody;
    
     if(_.lowerCase(btitle) === _.lowerCase(req.params.topic)){
-      console.log("match found!");
+      res.render('post', {
+        btitle : blogdata[i].titleBody,
+        bbody : blogdata[i].postBody,
+      })
     }
-    else
-    {
-      console.log("not found");
-    }
+    
   }
   
   
